@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftRadix",
+    name: "swift-radix",
     platforms: platforms,
     products: [
         .library(name: "SwiftRadix", targets: ["SwiftRadix"])

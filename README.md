@@ -1,8 +1,8 @@
-![SwiftRadix](Images/swiftradix-banner.png)
+![swift-radix](Images/swiftradix-banner.png)
 
-# SwiftRadix
+# swift-radix
 
-[![CI Build Status](https://github.com/orchetect/SwiftRadix/actions/workflows/build.yml/badge.svg)](https://github.com/orchetect/SwiftRadix/actions/workflows/build.yml) [![Platforms - macOS 10.10+ | iOS 9+ | tvOS 9+ | watchOS 2+ | visionOS 1+ | Linux](https://img.shields.io/badge/platforms-macOS%2010.10+%20|%20iOS%209+%20|%20tvOS%209+%20|%20watchOS%202+%20|%20visionOS%201+%20|%20Linux-lightgrey.svg?style=flat)](https://swiftpackageindex.com/orchetect/SwiftRadix/builds) [![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/orchetect/SwiftRadix/blob/main/LICENSE)
+[![Platforms - macOS 10.10+ | iOS 9+ | tvOS 9+ | watchOS 2+ | visionOS 1+ | Linux](https://img.shields.io/badge/platforms-macOS%2010.10+%20|%20iOS%209+%20|%20tvOS%209+%20|%20watchOS%202+%20|%20visionOS%201+%20|%20Linux-lightgrey.svg?style=flat)](https://swiftpackageindex.com/orchetect/swift-radix/builds) [![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/orchetect/swift-radix/blob/main/LICENSE)
 
 A lightweight library useful for translating integers to and from radix strings (binary, hex, octal or any base) using simple, clean functional syntax.
 
@@ -63,18 +63,26 @@ UInt8(123).hex == Int16(123)      // true
 
 ### Swift Package Manager (SPM)
 
-1. Add SwiftRadix as a dependency using Swift Package Manager.
+To add this package to an Xcode app project, use:
 
-   - In an app project or framework, in Xcode:
+ `https://github.com/orchetect/swift-textfile-tools` as the URL.
 
-     - Select the menu: **File → Swift Packages → Add Package Dependency...**
-     - Enter this URL: `https://github.com/orchetect/SwiftRadix`
+To add this package to a Swift package, add the dependency to your package and target in Package.swift:
 
-   - In a Swift Package, add it to the Package.swift dependencies:
-
-     ```swift
-     .package(url: "https://github.com/orchetect/SwiftRadix", from: "1.3.0")
-     ```
+```swift
+let package = Package(
+    dependencies: [
+        .package(url: "https://github.com/orchetect/swift-radix", from: "1.4.0")
+    ],
+    targets: [
+        .target(
+            dependencies: [
+                .product(name: "SwiftRadix", package: "swift-radix")
+            ]
+        )
+    ]
+)
+```
 
 ### Cocoapods
 
@@ -387,9 +395,13 @@ Licensed under the MIT license. See [LICENSE](LICENSE) for details.
 
 Please do not email maintainers for technical support. Several options are available for issues and questions:
 
-- Questions and feature ideas can be posted to [Discussions](https://github.com/orchetect/SwiftRadix/discussions).
-- If an issue is a verifiable bug with reproducible steps it may be posted in [Issues](https://github.com/orchetect/SwiftRadix/issues).
+- Questions and feature ideas can be posted to [Discussions](https://github.com/orchetect/swift-radix/discussions).
+- If an issue is a verifiable bug with reproducible steps it may be posted in [Issues](https://github.com/orchetect/swift-radix/issues).
 
 ## Contributions
 
-Contributions are welcome. Posting in [Discussions](https://github.com/orchetect/SwiftRadix/discussions) first prior to new submitting PRs for features or modifications is encouraged.
+Contributions are welcome. Posting in [Discussions](https://github.com/orchetect/swift-radix/discussions) first prior to new submitting PRs for features or modifications is encouraged.
+
+## Legacy
+
+This repository was formerly known as SwiftRadix.
