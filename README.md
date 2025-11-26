@@ -65,7 +65,7 @@ UInt8(123).hex == Int16(123)      // true
 
 To add this package to an Xcode app project, use:
 
- `https://github.com/orchetect/swift-textfile-tools` as the URL.
+ `https://github.com/orchetect/swift-radix` as the URL.
 
 To add this package to a Swift package, add the dependency to your package and target in Package.swift:
 
