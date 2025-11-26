@@ -84,12 +84,6 @@ let package = Package(
 )
 ```
 
-### Cocoapods
-
-```bash
-pod 'SwiftRadix'
-```
-
 ## Documentation
 
 ### Premise
